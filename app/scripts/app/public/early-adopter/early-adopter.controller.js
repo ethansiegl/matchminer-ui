@@ -28,6 +28,7 @@ angular.module('matchminerUiApp')
 
 				eac.isLoading = false;
 				eac.emailPosted = false;
+				eac.error = false;
 
 				eac.handleSubmit = function() {
 					eac.isLoading = true;
@@ -37,6 +38,10 @@ angular.module('matchminerUiApp')
                             .then(function() {
                                 eac.isLoading = false;
                                 eac.emailPosted = true;
+                            })
+							.catch(function() {
+                                eac.isLoading = false;
+								eac.error = true;
                             })
 					}, 1500);
 				};
