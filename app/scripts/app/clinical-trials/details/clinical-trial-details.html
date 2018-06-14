@@ -13,9 +13,8 @@
 
 <section class="clinical-trials-wrapper" layout-fill>
 	<section layout="column" id="clinical-trial-details" class="section-primary" layout-fill>
-		<div ng-if="!ENV.EPIC">
+		<div ng-if="!ENV.EPIC" ng-hide="ENV.cBio">
             <div ui-view="navbar"></div>
-            <div class="cr cr-top cr-left cr-sticky cr-red">BETA</div>
             <div class="navbar-separator"></div>
             <div ncy-breadcrumb ng-if="ctd.trial || ctd.trialNotFound"></div>
         </div>
