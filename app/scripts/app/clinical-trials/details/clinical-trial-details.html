@@ -536,7 +536,7 @@
 
 					<h4 class="detail-header">Prior Treatment Requirements</h4>
 					<span class="treatment-requirements-disclaimer md-red">
-						Please refer to the most recent <a class="treatment-requirements-disclaimer-link md-red" ng-click="ctd.visitOncoPro(ctd.trial.protocol_no)">protocol</a> document for a complete list of eligibility criteria.
+						Please refer to the most recent <a ng-hide="ENV.EPIC" class="treatment-requirements-disclaimer-link md-red" ng-click="ctd.visitOncoPro(ctd.trial.protocol_no)">protocol</a> <span ng-if="ENV.EPIC">protocol</span> document for a complete list of eligibility criteria.
 					</span>
 					<md-list>
 						<md-list-item class="ptr-list-item detail"
@@ -591,7 +591,7 @@
 						</md-button>
 					</div>
 
-					<div layout="column" class="sidebar-container">
+					<div layout="column" class="sidebar-container" ng-hide="ENV.EPIC">
 						<h3 ng-class="{
 							'sm-sidebar-headers': !ctd.isLargeMediaQuery
 						}">
@@ -666,7 +666,10 @@
 							            'trial-watchlist-actions': ctd.isLargeMediaQuery,
                                         'md-fab md-mini ct-badge-fab' : !ctd.isLargeMediaQuery
                                    }"
-							           analytics-on="click" analytics-event="Contact study coordinator" analytics-category="Clinical Trials" analytics-label="{{ctd.studyCoordinator.email_address}}"
+							           analytics-on="click"
+                                       analytics-event="Contact study coordinator"
+                                       analytics-category="Clinical Trials"
+                                       analytics-label="{{ctd.studyCoordinator.email_address}}"
 							           ng-click="ctd.emailInvestigator($event, ctd.trial, ctd.studyCoordinator.email_address)">
 								<md-icon aria-label="Trial investigator"
 								         md-font-library="material-icons">
@@ -677,11 +680,11 @@
 									Email {{ ctd.studyCoordinator.staff_role }}
 								</md-tooltip>
 							</md-button>
-                            <p ng-if="ENV.EPIC"><br>
+                            <div class="epic-contact-details" ng-if="ENV.EPIC"><br>
                                 <span class="trial-coordinator-email-label">Contact Email: </span>
                                 <br>
                                 <span class="trial-coordinator-email">{{ ctd.studyCoordinator.email_address }}</span>
-                            </p>
+                            </div>
 						</div>
 
 						<div class="trial-coordinator-details" ng-if="!ctd.studyCoordinator">
