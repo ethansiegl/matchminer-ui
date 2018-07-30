@@ -73,15 +73,6 @@ angular
 				if (Principal.isIdentityResolved()) {
 					Auth.authorize();
 				}
-
-                // When a user is redirected back to MM after being prompted to login, bring them to the original page they were trying to access
-                if (localStorage.getItem('afterAuthRedirectURL') !== null) {
-                    var redirectURL = localStorage.getItem('afterAuthRedirectURL');
-                    setTimeout(function () {
-                        localStorage.removeItem('afterAuthRedirectURL')
-                    }, 2000);
-                    window.location.href = redirectURL;
-                }
 			});
 
 			$rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
