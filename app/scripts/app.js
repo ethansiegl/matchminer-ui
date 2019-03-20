@@ -70,6 +70,8 @@ angular
 				$rootScope.toState = toState;
 				$rootScope.toStateParams = toStateParams;
 
+                ElasticSearchService.resetPatientSearchSize();
+
 				if (Principal.isIdentityResolved()) {
 					Auth.authorize();
 				}
@@ -99,10 +101,9 @@ angular
 					window.toPatientPage = false;
 				}
                 
-				if (fromState.name == 'patient' && toState.name == "clinicaltrials.overview") {
-						ClinicalTrialsService.resetSearchFilters();
-						ElasticSearchService.resetPatientSearchSize();
-				}
+                if (fromState.name == 'patient' && toState.name == "clinicaltrials.overview") {
+                    ClinicalTrialsService.resetSearchFilters();
+                }
 
 				// Set the page title key to the one configured in state or use default one
 				if (toState.data.pageTitle) {
