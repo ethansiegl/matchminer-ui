@@ -50,6 +50,15 @@ Second run the tests to see if everything still works.
 
     gulp test
 
+If you do not have SSL certificates you would like to use you can, generate them:
+`
+mkdir -p ../certificates
+openssl genrsa 2048 > ../certificates/matchminer_dfci_harvard_edu.key
+chmod 400 ../certificates/matchminer_dfci_harvard_edu.key
+openssl req -new -x509 -nodes -sha256 -days 365 -key ../certificates/matchminer_dfci_harvard_edu.key -out ../certificates/matchminer.crt -subj "/C=US/ST=CA/L=MyCity/O=MyCompany/OU=ACC/CN=myemail@someemailprovider.com"
+`
+
+
 After all these steps you can start the hot reloading development server
 
     gulp serve
