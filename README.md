@@ -155,9 +155,10 @@ After building the MatchMiner UI with the `gulp --env production build` command,
 
 The contents of this folder can be deployed in a webserver folder.
 
-## Built with 
+## Built with
+* node@v10.16.0 
 * npm
 * Bower
 * AngularJS
-* Gulp
+* Gulp@v3.9.1
 * Karma

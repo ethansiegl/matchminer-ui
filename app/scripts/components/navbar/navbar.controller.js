@@ -43,7 +43,8 @@ angular.module('matchminerUiApp')
 					//Set logo based on config in config.js
                     $(".mm-logo")
 						.css('background','url(\'../images/' + ENV.resources.logo + '\')')
-						.css('background-size','100%');
+						.css('background-size','100%')
+						.css('background-repeat', 'no-repeat');
 
 					if (vm.state == "filters-overview"
 						|| vm.state == "matches"
