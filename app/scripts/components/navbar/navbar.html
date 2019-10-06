@@ -19,8 +19,7 @@
 >
 <!--    <md-toolbar id="announcement-banner" class="md-warn" ng-if="nbc.showBanner">
         <span>
-        MatchMiner is undergoing system testing April 1, from 9:00 AM to 1:00 PM EDT. Access to the site during this period will be intermittent, so we recommend that users delay further use until testing is complete. Questions? Please email us at
-            <a href="mailto:matchminer@dfci.harvard.edu.">matchminer@dfci.harvard.edu</a>
+        MatchMiner is undergoing system testing April 1, from 9:00 AM to 1:00 PM EDT. Access to the site during this period will be intermittent, so we recommend that users delay further use until testing is complete.
         </span>
     </md-toolbar> -->
     <div layout="row" layout-padding layout-align="space-between center" class="nav-wrapper">
@@ -101,6 +100,9 @@
                    analytics-on="click" analytics-event="Navigate to statistics" analytics-category="Navbar"
                    analytics-label="Authenticated"
                    ui-sref="statistics">Statistics</a>
+            </li>
+            <li has-authority="admin">
+                <a target="_blank" rel="noopener noreferrer" href="http://35.193.82.240:9000">Curate</a>
             </li>
             <li has-any-authority="cti"
                 ng-class="{ 'active' :nbc.isMatching }"
