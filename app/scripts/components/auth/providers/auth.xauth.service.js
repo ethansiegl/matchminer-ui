@@ -20,26 +20,28 @@
  * Authentication Provider of MatchMinerUI for SAML services
  */
 angular.module('matchminerUiApp')
-	.factory('AuthServerProvider', ['$http', '$log', '$q', '$window', 'ENV',
-		function($http, $log, $q, $window, ENV) {
+	.factory('AuthServerProvider', ['$http', '$log', '$q', '$window', 'ENV', '$state',
+		function($http, $log, $q, $window, ENV, $state) {
 			var service = {};
 
 			service.login = function () {
-				$log.info("Logging in via Partners SAML");
-
-				var deferred = $q.defer();
-				$window.open(ENV.slsUrl, '_self');
-
-				return deferred.promise;
+				window.location.reload()
+				// $log.info("Logging in via Partners SAML");
+				//
+				// var deferred = $q.defer();
+				// $window.open(ENV.slsUrl, '_self');
+				//
+				// return deferred.promise;
 			};
 
 			service.logout = function () {
-				$log.info("Logging out of MatchMiner. Clearing local storage.");
-
-				var deferred = $q.defer();
-				$window.open(ENV.api.host + '?slo', '_self');
-
-				return deferred.promise;
+				$state.go('home')
+				// $log.info("Logging out of MatchMiner. Clearing local storage.");
+				//
+				// var deferred = $q.defer();
+				// $window.open(ENV.api.host + '?slo', '_self');
+				//
+				// return deferred.promise;
 			};
 
 			return service;

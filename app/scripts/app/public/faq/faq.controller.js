@@ -39,13 +39,6 @@ angular.module('matchminerUiApp')
 						]
 					},
 					{
-						icon: 'storage',
-						question: 'Where does the genomic data in MatchMiner come from?',
-						answer: [
-							'MatchMiner automatically imports all genomic data from the Profile Sequencing project (11-104 '+ ENV.resources.institution +' Protocol). MatchMiner automatically imports all genomic data twice weekly.'
-						]
-					},
-					{
 						icon: 'assignment',
 						question: 'What Clinical Trials are currently in MatchMiner?',
 						answer: [
@@ -58,8 +51,8 @@ angular.module('matchminerUiApp')
 						answer: [
 							'We currently maintain three levels of access:',
 							'<ul><li><b>Trial Search is open to all, </b>and does not require a user name or password.</li>'
-							+ '<li><b>Patient-Centric Matching is available to all Oncologists who currently have access to Profile reports via OncoPanel Results Viewer. </b>The approved user list is automatically synced on a nightly basis. </li>'
-							+ '<li><b>Patient identification and notification is only available to approved clinical trial investigators. </b> To apply for access, complete the <a class="faq-link" href="http://bit.ly/matchminer-apply" target="_blank"> online registration form</a>.  Access approval is granted by the '+ ENV.resources.institution +' Chief Clinical Officer, Bruce Johnson.</li></ul>'
+							+ '<li><b>Patient-Centric Matching is available to all Oncologists. </li>'
+							+ '<li><b>Patient identification and notification is only available to approved clinical trial investigators. </b> To apply for access, complete the <a class="faq-link" href="http://bit.ly/matchminer-apply" target="_blank"> online registration form</a>. Approval must be granted by the Chief Clinical Officer.</li></ul>'
 						]
 					},
 					{

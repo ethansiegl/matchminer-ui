@@ -23,4 +23,4 @@ COPY certificates /certificates
 COPY gulpfile.js /gulpfile.js
 COPY properties /properties
 
-RUN gulp build --env=dev
+#RUN gulp build --env=dev

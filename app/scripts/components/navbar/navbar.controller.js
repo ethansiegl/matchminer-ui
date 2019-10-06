@@ -62,7 +62,7 @@ angular.module('matchminerUiApp')
 				});
 
 				vm.applyForAccess = function () {
-					$window.location.href = 'http://bit.ly/matchminer-apply';
+					window.open( 'https://forms.gle/zrneKCvAGsznCaKq6');
 				};
 
 				/**
