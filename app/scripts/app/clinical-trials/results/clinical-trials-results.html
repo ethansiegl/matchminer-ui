@@ -83,7 +83,7 @@
                         </md-tooltip>
                     </th>
                     <th md-column md-order-by="genomic_match" ng-class="{'trial-genomic-matches-header': ctr.hasTrialMatches}" ng-if="ctr.hasTrialMatches">Genomic match</th>
-                    <th md-column md-order-by="protocol_no">Protocol #</th>
+                    <th md-column md-order-by="protocol_no">ID</th>
                     <th md-column md-order-by="_summary.disease_center">Disease<br/>Center</th>
                     <th md-column md-order-by="_summary.site">Coordinating<br/>Center</th>
                     <th md-column md-order-by="_summary.status.value">{{ ENV.resources.institution }} Trial Status</th>
@@ -182,7 +182,7 @@
                             <span class="trial-short-title">{{ trial._source.short_title }}</span>
                         </p>
                         <p class="trial-description-field">
-                            <span class="trial-field-label">Protocol No:</span> {{ trial._source.protocol_no }}
+                            <span class="trial-field-label">ID:</span> {{ trial._source.nct_id }}
                         </p>
                         <p class="trial-investigator trial-description-field">
                             <span class="trial-field-label" ng-if="trial._source._summary.dfci_investigator.is_overall_pi">DFCI & </span>
