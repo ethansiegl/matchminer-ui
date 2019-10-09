@@ -5,7 +5,7 @@
       "elasticsearch": {
         "host": "http://35.193.82.240:9200",
         "proxy": "http://35.193.82.240:9200",
-        "index": "dev"
+        "index": "matchminer"
       },
       "api": {
         "host": "http://mm_api:5000",
