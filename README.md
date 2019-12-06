@@ -50,14 +50,14 @@ Second run the tests to see if everything still works.
 
     gulp test
 
-If you do not have SSL certificates you would like to use you can, generate them:
-`
-mkdir -p ../certificates
-openssl genrsa 2048 > ../certificates/matchminer_dfci_harvard_edu.key
-chmod 400 ../certificates/matchminer_dfci_harvard_edu.key
-openssl req -new -x509 -nodes -sha256 -days 365 -key ../certificates/matchminer_dfci_harvard_edu.key -out ../certificates/matchminer.crt -subj "/C=US/ST=CA/L=MyCity/O=MyCompany/OU=ACC/CN=myemail@someemailprovider.com"
-`
 
+If you do not have SSL certificates you would like to use you can, generate them:
+```
+  mkdir -p ../certificates
+  openssl genrsa 2048 > ../certificates/matchminer.key
+  chmod 400 ../certificates/matchminer.key
+  openssl req -new -x509 -nodes -sha256 -days 365 -key ../certificates/matchminer.key -out ../certificates/matchminer.crt -subj "/C=US/ST=CA/L=MyCity/O=MyCompany/OU=ACC/CN=myemail@someemailprovider.com"
+```
 
 After all these steps you can start the hot reloading development server
 
@@ -134,8 +134,8 @@ MatchMiner UI has several profiles which it uses for configuration. These can be
 | token              	| Credential token for a development user available in the API database. <br /> **DO NOT USE IN PRODUCTION.**                                                                                                                                                                                                  	| `fb4dd28s0-d3aa-481b-bcd6-270hhs8s90e11`                                  	|
 | user_id            	| Credential user ID for the development user. <br /> **DO NOT USE IN PRODUCTION.**                                                                                                                                                                                                                            	| `577cf6ef2b8192642cef0337`                                                	|
 | **certificate**    	|                                                                                                                                                                                                                                                                                                          	|                                                                           	|
-| key                	| Relative path to the SSL certificate key to setup a secure connection to the API                                                                                                                                                                                                                         	| `../certificates/matchminer_dfci_harvard_edu.key`                                          	|
-| cert               	| Relative path to the SSL certificate                                                                                                                                                                                                                                                                     	| `../certificates/matchminer_dfci_harvard_edu.crt`                                          	|
+| key                	| Relative path to the SSL certificate key to setup a secure connection to the API                                                                                                                                                                                                                         	| `../certificates/matchminer.key`                                          	|
+| cert               	| Relative path to the SSL certificate                                                                                                                                                                                                                                                                     	| `../certificates/matchminer.crt`                                          	|
 | **sessionTimeout** 	|                                                                                                                                                                                                                                                                                                          	|                                                                           	|
 | idleAllowed        	| Number of seconds of allowed idle time before a session in invalidated                                                                                                                                                                                                                                   	| `2700`                                                                    	|
 | idleCountdown      	| Number of seconds that the timeout notification is shown to the user telling them that an action is required to reset the session timeout                                                                                                                                                                	| `30`                                                                      	|
