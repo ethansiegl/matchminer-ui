@@ -11,3 +11,4 @@ properties/config.json
 app/scripts/config.js
 app/scripts/templates.js
 matchminer_ui_test_results.xml
+deploy.sh
