@@ -249,7 +249,7 @@
                                                       ng-repeat="ds in trial._source._summary.disease_status | limitTo: (trial.numTags || 3)"></clinical-trial-badge>
 
                                 <clinical-trial-badge category="drug" value="drug.drug_name" view="drug.drug_name"
-                                                      ng-repeat="drug in trial._source._summary.drugs | limitTo: (trial.numTags || 3)"></clinical-trial-badge>
+                                                      ng-repeat="drug in trial._source.drug_list.drug | limitTo: (trial.numTags || 3)"></clinical-trial-badge>
 
                                 <clinical-trial-badge category="phase" value="trial._source._summary.phase_summary" view="trial._source.phase"
                                                       prefix="Phase"></clinical-trial-badge>
