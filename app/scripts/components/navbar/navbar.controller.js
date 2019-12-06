@@ -34,6 +34,7 @@ angular.module('matchminerUiApp')
 				vm.state = $state.current.name;
 				vm.userAccount = UserAccount;
                 vm.showBanner = true;
+                vm.loginText = ENV.demo ? 'Login' : 'Partners Login';
 
 				$scope.$watch(function() {
 					return $state.current.name;
@@ -43,7 +44,8 @@ angular.module('matchminerUiApp')
 					//Set logo based on config in config.js
                     $(".mm-logo")
 						.css('background','url(\'../images/' + ENV.resources.logo + '\')')
-						.css('background-size','100%');
+						.css('background-size','100%')
+						.css('background-repeat', 'no-repeat');
 
 					if (vm.state == "filters-overview"
 						|| vm.state == "matches"
@@ -61,7 +63,7 @@ angular.module('matchminerUiApp')
 				});
 
 				vm.applyForAccess = function () {
-					$window.location.href = 'http://bit.ly/matchminer-apply';
+					$window.location.href = ENV.accessRequestFormLink;
 				};
 
 				/**
