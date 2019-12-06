@@ -78,7 +78,7 @@
 								<span class="trial-property">
 									<md-icon md-font-set="material-icons">person</md-icon>
 									<span class="trial-property-label">
-										{{ ENV.resources.institution }} & Overall Principal Investigator
+										Overall Principal Investigator
 									</span>
 								</span>
 								<span class="trial-property-value">
@@ -314,7 +314,7 @@
 												category="drug"
 												value="drug.drug_name"
 												view="drug.drug_name"
-												ng-repeat="drug in ctd.trial.drug_list.drug track by $index">
+												ng-repeat="drug in ctd.trial._summary.drugs track by $index">
 										</clinical-trial-badge>
 									</span>
 								</span>
