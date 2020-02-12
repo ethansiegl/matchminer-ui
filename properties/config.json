@@ -3,11 +3,12 @@
     "ENV": {
       "name": "development",
       "elasticsearch": {
-        "host": "http://localhost:9300",
-        "index": "staging"
+        "host": "http://35.193.227.127/elasticsearch",
+        "proxy": "http://35.193.227.127/elasticsearch",
+        "index": "matchminer"
       },
       "api": {
-        "host": "http://localhost:5000",
+        "host": "http://35.193.227.127",
         "endpoint": "/api"
       },
       "samlAuthentication": false,
@@ -31,10 +32,10 @@
         "oncpro_base": "",
         "ctgov_base": "https://clinicaltrials.gov/ct2/show/",
         "logo": "dfci.jpg",
-         "institution": "DEFAULT",
-        "institutionFull": "Replace with your institute name",
-        "email": "info@yourInstitute.com",
-        "emailSecondary": "info2@yourInstitute.com"
+        "institution": "DFCI",
+        "institutionFull": "Dana-Farber Cancer Institute",
+        "email": "matchminer@dfci.harvard.edu",
+        "emailSecondary": "matchminer@dfci.harvard.edu"
       },
       "EPIC": false,
       "cBio": false,
@@ -46,12 +47,13 @@
     "ENV": {
       "name": "staging",
       "elasticsearch": {
-        "host": "http://localhost:9300",
-        "index": "staging"
+        "host": "http://35.193.227.127/elasticsearch",
+        "proxy": "http://35.193.227.127/elasticsearch",
+        "index": "matchminer"
       },
       "api": {
-        "host": "http://localhost:5000",
-        "endpoint": "http://localhost:5000/api"
+        "host": "http://35.193.227.127",
+        "endpoint": "/api"
       },
       "samlAuthentication": true,
       "certificate" : {
@@ -70,10 +72,10 @@
         "oncpro_base": "",
         "ctgov_base": "https://clinicaltrials.gov/ct2/show/",
         "logo": "dfci.jpg",
-         "institution": "DEFAULT",
-        "institutionFull": "Replace with your institute name",
-        "email": "info@yourInstitute.com",
-        "emailSecondary": "info2@yourInstitute.com"
+        "institution": "DFCI",
+        "institutionFull": "Dana-Farber Cancer Institute",
+        "email": "matchminer@dfci.harvard.edu",
+        "emailSecondary": "matchminer@dfci.harvard.edu"
       },
       "EPIC": false,
       "cBio": false,
@@ -85,12 +87,13 @@
     "ENV": {
       "name": "production",
       "elasticsearch": {
-        "host": "http://localhost:9300",
+        "host": "http://35.193.227.127/elasticsearch",
+        "proxy": "http://35.193.227.127/elasticsearch",
         "index": "matchminer"
       },
       "api": {
-        "host": "http://localhost:5000",
-        "endpoint": "http://localhost:5000/api"
+        "host": "http://35.193.227.127",
+        "endpoint": "/api"
       },
       "samlAuthentication": true,
       "certificate" : {
@@ -109,10 +112,10 @@
         "oncpro_base": "",
         "ctgov_base": "https://clinicaltrials.gov/ct2/show/",
         "logo": "dfci.jpg",
-         "institution": "DEFAULT",
-        "institutionFull": "Replace with your institute name",
-        "email": "info@yourInstitute.com",
-        "emailSecondary": "info2@yourInstitute.com"
+        "institution": "DFCI",
+        "institutionFull": "Dana-Farber Cancer Institute",
+        "email": "matchminer@dfci.harvard.edu",
+        "emailSecondary": "matchminer@dfci.harvard.edu"
       },
       "EPIC": false,
       "cBio": false,

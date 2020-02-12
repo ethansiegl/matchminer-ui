@@ -8,6 +8,6 @@ COPY . /
 WORKDIR /
 RUN bower install --config.interactive=false  --allow-root && npm install
 #COPY ./properties/config.json properties/config.json
-RUN gulp --env dev build
+RUN gulp build --env stage
 WORKDIR /dist
 ENTRYPOINT http-server -g
