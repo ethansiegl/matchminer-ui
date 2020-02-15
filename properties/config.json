@@ -55,7 +55,11 @@
         "host": "http://localhost/",
         "endpoint": "/api"
       },
-      "samlAuthentication": true,
+      "samlAuthentication": false,
+      "devUser": {
+        "token" : "fb4d6830-d3aa-481b-bcd6-270d69790e11",
+        "user_id" : "577cf6ef2b9920002cef0337"
+      },
       "certificate" : {
         "key": "../certificates/matchminer.key",
         "cert": "../certificates/matchminer.crt"
@@ -80,7 +84,7 @@
       "EPIC": false,
       "cBio": false,
       "accessRequestFormLink":  "https://example.com",
-      "demo": false
+      "demo": true
     }
   },
   "prod" : {
@@ -120,7 +124,7 @@
       "EPIC": false,
       "cBio": false,
       "accessRequestFormLink":  "https://example.com",
-      "demo": false
+      "demo": true
     }
   }
 }
