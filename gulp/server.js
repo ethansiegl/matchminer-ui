@@ -57,10 +57,8 @@ function browserSyncInit(baseDir, browser) {
 
 	var elasticSearchProxy = proxy('/elasticsearch', {
 		target: config[environment].ENV.elasticsearch.host,
-		logLevel: 'debug',
-		pathRewrite: {
-			'^/elasticsearch' : ''       // remove path
-		}
+		logLevel: 'debug'
+
 	});
 
 	var server = {
