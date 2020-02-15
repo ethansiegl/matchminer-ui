@@ -32,10 +32,10 @@
         "oncpro_base": "",
         "ctgov_base": "https://clinicaltrials.gov/ct2/show/",
         "logo": "dfci.jpg",
-        "institution": "DFCI",
-        "institutionFull": "Dana-Farber Cancer Institute",
-        "email": "matchminer@dfci.harvard.edu",
-        "emailSecondary": "matchminer@dfci.harvard.edu"
+        "institution": "DEMO",
+        "institutionFull": "DEMO Institution",
+        "email": "help@institute.edu",
+        "emailSecondary": "help@institute.edu"
       },
       "EPIC": false,
       "cBio": false,
@@ -68,14 +68,14 @@
         "piwik_site_id": 2
       },
       "slsUrl": "",
-      "resources": {
+       "resources": {
         "oncpro_base": "",
         "ctgov_base": "https://clinicaltrials.gov/ct2/show/",
         "logo": "dfci.jpg",
-        "institution": "DFCI",
-        "institutionFull": "Dana-Farber Cancer Institute",
-        "email": "matchminer@dfci.harvard.edu",
-        "emailSecondary": "matchminer@dfci.harvard.edu"
+        "institution": "DEMO",
+        "institutionFull": "DEMO Institution",
+        "email": "help@institute.edu",
+        "emailSecondary": "help@institute.edu"
       },
       "EPIC": false,
       "cBio": false,
@@ -108,14 +108,14 @@
         "piwik_site_id": 1
       },
       "slsUrl": "",
-      "resources": {
+       "resources": {
         "oncpro_base": "",
         "ctgov_base": "https://clinicaltrials.gov/ct2/show/",
         "logo": "dfci.jpg",
-        "institution": "DFCI",
-        "institutionFull": "Dana-Farber Cancer Institute",
-        "email": "matchminer@dfci.harvard.edu",
-        "emailSecondary": "matchminer@dfci.harvard.edu"
+        "institution": "DEMO",
+        "institutionFull": "DEMO Institution",
+        "email": "help@institute.edu",
+        "emailSecondary": "help@institute.edu"
       },
       "EPIC": false,
       "cBio": false,
