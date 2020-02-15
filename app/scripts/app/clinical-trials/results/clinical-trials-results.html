@@ -243,7 +243,7 @@
                                 <clinical-trial-badge category="tumor_type" value="diagnosis" view="diagnosis"
                                                       ng-repeat="diagnosis in trial._source._summary.tumor_types | trialBadgeFilter | limitTo: (trial.numTags || 3)"></clinical-trial-badge>
 
-                                <clinical-trial-badge category="age" value="trial._source.age" view="trial._source.age"></clinical-trial-badge>
+                                <clinical-trial-badge category="age" value="trial._source._summary.age_summary" view="trial._source.age"></clinical-trial-badge>
 
                                 <clinical-trial-badge category="disease_status" value="ds" view="ds"
                                                       ng-repeat="ds in trial._source._summary.disease_status | limitTo: (trial.numTags || 3)"></clinical-trial-badge>
@@ -251,7 +251,7 @@
                                 <clinical-trial-badge category="drug" value="drug.drug_name" view="drug.drug_name"
                                                       ng-repeat="drug in trial._source.drug_list.drug | limitTo: (trial.numTags || 3)"></clinical-trial-badge>
 
-                                <clinical-trial-badge category="phase" value="trial._source.phase" view="trial._source.phase"
+                                <clinical-trial-badge category="phase" value="trial._source._summary.phase_summary" view="trial._source.phase"
                                                       prefix="Phase"></clinical-trial-badge>
 
                                 <span flex></span>
